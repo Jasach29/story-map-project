@@ -87,7 +87,24 @@ const slideOptions = {
          };
     },
   },
-  conclusion: {}
+  conclusion: { style: (feature) => {
+      const colors = {
+        1: '#d6e6f2',
+        2: '#b8d5e8',
+        3: '#8ebbd7',
+        4: '#609cc6',
+        5: '#397cad',
+        6: '#174f87',
+      };
+      
+      return {
+        color: colors[feature.properties.slr_ft],
+        fillColor: colors[feature.properties.slr_ft],
+      fillOpacity: 0.09,
+    weight: 0.5,      
+         };
+    },
+  },
 };
 
 
